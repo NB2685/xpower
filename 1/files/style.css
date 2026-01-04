@@ -1,0 +1,651 @@
+@charset "UTF-8";
+html, body, div, pre, table, thead, tbody, th, td, dl, dt, dd, ul, ol, li,
+header, footer, section, article, nav, aside,
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1; }
+
+header, footer, section, article, nav, aside {
+  display: block; }
+
+body {
+  background-color: #e6e6e6;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-color: #313131;
+  text-align: center; }
+
+* {
+  -webkit-appearance: none;
+}
+
+/* ========================================
+   有機線
+======================================== */
+
+#organic-line {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0.6;
+    filter: blur(1px);
+}
+
+/* ===========================================
+  header 
+=========================================== */
+
+.header {
+  width: 100%;
+  background: url(header_bg.png) top center repeat-x;
+}
+
+.header-wrap {
+  display: table;
+  margin: 0 auto;
+}
+
+.header-siteid {
+  display: table-cell;
+  padding: 40px 0 0 50px;
+  vertical-align: top;
+  margin-top: 10px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+}
+
+.header-catch {
+  display: table-cell;
+  padding: 60px 50px 0 0;
+  text-align: right;
+  vertical-align: top;
+  scale: 70%;
+}
+
+#header {
+  margin: 0 auto;
+  width: 800px;
+  height: 84px;
+  margin-bottom: 32px;
+  padding: 0 0 45px; }
+  #header #logo {
+    padding: 8px 0 0 20px;
+    text-align: left; }
+
+
+#content {
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  padding: 25px 50px;}
+  #content::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 100%; }
+
+    #content #left .image img {
+      display: block;
+      margin: 0 auto 11px; }
+    #content #left .image {
+      display: block;
+      font-size: 14px; }
+
+    #content #right #audio {
+      background: url(bt_play.png) no-repeat center top;
+      cursor: pointer;
+      margin: 0 auto 36px;
+      height: 75px;
+      width: 70px;
+      padding: 42px 0 0 247px;
+      text-align: left; }
+    #content #right #download a {
+      color: #0027e3;
+      text-decoration: none;
+      font-weight: bold;
+      font-size:18px;
+      border-bottom: 1px solid #0027e3; }
+
+.download{
+  position: relative;
+  margin-bottom: 40px!important;
+  }
+
+
+.step {
+  font-size: clamp(20px, 4vw, 28px);
+    font-weight: bold;
+    margin: 0px 0 0px 0px;
+    position: relative;
+    text-align: left; 
+    padding-left: 130px;
+  }
+
+.step2 {
+  font-size: clamp(20px, 4vw, 28px);
+    font-weight: bold;
+    position: relative;
+    text-align: left; 
+    padding-bottom: 30px;
+    padding-left: 130px;
+  }
+
+.audio1 {
+    background: url(bt_play.png) no-repeat left top;
+    background-size: 50%;
+    height: 0px;
+    margin: 0 0 0px 0;
+    padding: 0 0 0 0px;
+    position: relative;
+    left: 0px;
+    text-align: left; }
+
+.caption{
+  font-size: clamp(20px, 4vw, 28px);
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 150%;
+  font-color: #313131;
+    font-weight: bold;
+}
+
+.mediabox {
+    background: url(audio_arrow.png) no-repeat 0px 30px;
+    background-size: 30%;
+    height: 113px;
+    position: relative;
+    left: -10px;
+    right: 0px;
+    margin: 0 auto 15px;
+    padding: 0 15px 0 84px;
+    width: 90px;
+    height: 60px; }
+
+ .arrow{
+ 	position: relative;
+  display: inline-block;
+  padding-bottom:40px;
+  padding-top: -30px;
+ }
+
+ .playbtn{
+  padding-top:40px;
+ 	position: relative;
+  display: inline-block;
+ }
+
+.form {
+    margin-top: 30px;
+    width: 420px;
+    position: relative;
+    margin: 0 auto;
+     }
+
+    .form th, .form td {
+      vertical-align: top; }
+
+    .form th {
+      font-size: 24px;
+      font-weight:bold;
+      padding: 8px 0 0 0;
+      text-align: right;
+      position: relative;
+      left:0px;
+      width: 180px; }
+    .form td {
+      padding: 0 0 5px 5px;
+      text-align: left; }
+  input, .right textarea {
+    border: 1px solid #000;
+    font-size: 12px;
+    padding: 5px;
+    width: 270px;
+    height: 30px;
+    box-shadow: inset 0 0 0 0px #a2a2a2;
+    -webkit-box-shadow: inset 0 0 0 0px #a2a2a2; 
+    -webkit-appearance: none;
+  border-radius: 0;
+}
+  textarea {
+    border: 1px solid #000;
+    font-size: 12px;
+    padding: 5px;
+    width: 270px;
+    height: 170px;
+    box-shadow: inset 0 0 0 0px #a2a2a2;
+    -webkit-box-shadow: inset 0 0 0 0px #a2a2a2;
+      -webkit-appearance: none;
+  border-radius: 0; 
+}
+  .button {
+    text-align: center;
+    }
+  .button .btn {
+      background: #0a0a0a;
+      border: none;
+      border-radius: 0px;  
+      color: #fff;
+      cursor: pointer;
+      font-size: 26px;
+      font-weight: bold;
+      height: 28px;
+      letter-spacing: .0.8em;
+      padding-left: .6em;
+      text-align: center;
+      position: relative;
+        -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* ========================================
+   フッター
+======================================== */
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links {
+    display: inline;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+}
+
+
+
+/* ========================================
+   フォームスタイル（白背景対応版）
+======================================== */
+.mirai-form {
+    margin-top: 60px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* ラベルスタイル */
+.light-mode-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: clamp(14px, 3.5vw, 15px);
+    color: #333; /* 濃いグレーで視認性確保 */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.required {
+    color: #c83232; /* 必須マークの赤 */
+    margin-left: 4px;
+}
+
+/* 入力フィールドスタイル（白背景用） */
+.light-mode-form .form-group input,
+.light-mode-form .form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: #fcfcfc; /* わずかにオフホワイト */
+    border: 1px solid #d0d0d0; /* 境界線を明確に */
+    border-radius: 4px;
+    color: #1a1a1a; /* 入力文字は黒 */
+    font-size: 16px; /* スマホでズームしないサイズ */
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.light-mode-form .form-group input::placeholder,
+.light-mode-form .form-group textarea::placeholder {
+    color: #999; /* プレースホルダー色 */
+}
+
+.light-mode-form .form-group input:focus,
+.light-mode-form .form-group textarea:focus {
+    outline: none;
+    border-color: #555; /* フォーカス時に濃く */
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05); /* フォーカスリング */
+}
+
+.light-mode-form .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.8;
+}
+
+/* 送信ボタン（白背景用） */
+.light-mode-form .submit-btn {
+    width: 100%;
+    padding: 20px;
+    background: #1a1a1a; /* 黒ボタンで引き締め */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+}
+
+.light-mode-form .submit-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode-form .submit-btn:disabled {
+    background: #999;
+    color: #e6e6e6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.light-mode-form .form-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666; /* 注意書きはグレー */
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ローディングスピナー（白背景用） */
+.btn-loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid #fff; /* 白いスピナー */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ========================================
+   送信完了メッセージ（白背景対応版）
+======================================== */
+#form-container {
+    transition: opacity 0.5s ease;
+}
+
+.success-message.light-mode-message {
+    text-align: center;
+    padding: 80px 30px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 60px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.light-mode-message .success-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 30px;
+    color: #1a1a1a; /* アイコンは黒 */
+}
+
+.light-mode-message h3 {
+    font-size: clamp(20px, 5vw, 24px);
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1a1a1a; /* 見出しは黒 */
+}
+
+.light-mode-message p {
+    font-size: clamp(15px, 4vw, 18px);
+    color: #444; /* 本文は濃いグレー */
+    line-height: 2.2;
+    margin-bottom: 20px;
+}
+
+/* セクション間の視覚的区切り線 */
+/* <div class="section-divider"></div> */
+.section-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c9c9c9, transparent);
+    margin: 100px auto;
+}
+
+.section-divider.light {
+    background: linear-gradient(90deg, transparent, #2d2d2d, transparent);
+}
+
+  #content #right {
+    margin-top: 30px;
+  }
+
+
+/* ====================================================
+   Mobile Optimization (修正版)
+   ==================================================== */
+
+/* 基本設定：横スクロール防止 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 全要素のサイズ計算を枠線込みに */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 画像レスポンシブ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+        /* ========== スマホ専用改行 ========== */
+        .sp-only {
+            display: none;
+        }
+
+        .pc-only {
+            display: inline;
+        }
+
+        @media (max-width: 768px) {
+            .sp-only {
+                display: inline;
+            }
+            .pc-only {
+                display: none;
+            }
+        }
+
+/* --- スマホ向けレイアウト調整 --- */
+@media screen and (max-width: 768px) {
+  
+  /* コンテナ幅のリセット */
+  .header-wrap,
+  #content,
+  #header {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important; /* 左右に少し余白 */
+  }
+
+  /* コンテンツエリア（白背景）の高さ制限を解除（★フッター被りの主原因修正） */
+  #content {
+    height: auto !important; 
+    padding-bottom: 40px !important; /* 下に余裕を持たせる */
+  }
+
+  /* 左右カラムの縦積み化 */
+  #content #left,
+  #content #right {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: auto !important; /* ★ここもautoにして中身に合わせて伸ばす */
+  }
+
+  /* 右カラム（Step1, Step2など）の上部余白 */
+  #content #right {
+    margin-top: 0px;
+    text-align: center !important; /* 中身を中央揃え */
+  }
+
+  /* Step1, Step2の見出し調整 */
+  .step, .step2 {
+    padding-left: 0 !important;
+    margin: 0 auto 20px !important;
+    position: static !important; /* 位置固定を解除 */
+  }
+
+  /* --- Step1: 矢印と再生ボタンの横並び対応 --- */
+  
+  /* 画像の親コンテナ（もしあれば）や画像自体をインライン化 */
+  .arrow,
+  .playbtn {
+    display: inline-block !important; /* 横に並べる */
+    vertical-align: middle !important; /* 上下中央揃え */
+    position: static !important;       /* 位置固定解除 */
+    margin: 0 5px !important;          /* 画像間の隙間 */
+    padding: 0 !important;
+    width: auto !important;            /* 幅は画像なりに */
+  }
+
+  /* 画像自体のサイズ調整（スマホで大きすぎないように） */
+  .arrow img {
+    width: 60px !important; /* 少し小さく */
+    height: auto !important;
+  }
+
+  .playbtn img {
+    width: 100px !important; /* 少し小さく */
+    height: auto !important;
+  }
+
+
+  /* --- Step2 & Form: レイアウト調整 --- */
+  
+  /* フォーム周りの高さ制限解除 */
+  .step2box,
+  .step1box {
+    height: auto !important; /* ★ここもautoにする */
+    position: static !important;
+  }
+
+  /* ダウンロードリンク */
+  .download {
+    margin: 20px auto 40px !important;
+    position: static !important;
+    text-align: center !important;
+  }
+
+  /* フォーム全体 */
+  .form {
+    width: 100% !important;
+    margin: 0 auto !important;
+    position: static !important;
+  }
+
+  /* フォーム内のテーブル構造をブロック化（縦積み） */
+  .form tbody, .form tr, .form th, .form td {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .form th {
+    text-align: left !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+  }
+
+  /* 入力欄 */
+  input, textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 送信ボタン */
+  .button {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+  }
+
+  .button .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 60px !important;
+    position: static !important;
+    margin: 0 auto !important;
+  }
+
+  .step,
+  .step2 {
+    padding-left: 0px;
+  }
+
+  /* ヘッダー調整 */
+  .header-siteid,
+  .header-catch {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+  }
+
+  .header-catch {
+    display: none!important;
+  }
+
+}

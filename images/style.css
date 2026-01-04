@@ -588,7 +588,7 @@ img {
   }
 
   .playbtn img {
-    width: 100px !important; /* 少し小さく */
+  /*  width: 100px; /* 少し小さく */
     height: auto !important;
   }
 

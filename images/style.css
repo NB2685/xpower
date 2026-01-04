@@ -527,6 +527,12 @@ img {
             }
         }
 
+
+video {
+  width: 70%;
+}
+
+
 /* --- スマホ向けレイアウト調整 --- */
 @media screen and (max-width: 768px) {
   
@@ -668,7 +674,13 @@ img {
     display: none!important;
   }
 
+
+video {
+  width: 99%;
 }
+
+}
+
 
 
 .list {
@@ -679,6 +691,60 @@ img {
   font-weight: 900;
   margin: 0 auto;
 }
+
+
+.letter {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.letter .title {
+    font-size: 22px;
+    margin: 0 0 10px 7px;
+    text-shadow: 3px 3px 3px #e8e8e8; 
+    font-weight: 600;
+  }
+.letter .name {
+  text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 0 10px 10px; 
+  }
+.letter .float {
+    float: left;
+    margin: 0 14px 20px 0; 
+  }
+.letter .clear {
+    clear: both; 
+  }
+.letter .b {
+    font-weight: bold; 
+  }
+.letter .ft_22 {
+    font-size: 22px; 
+  }
+.letter .ft_14 {
+    font-size: 14px; 
+  }
+.letter .ft_bgy {
+    background: #fff937;
+    padding: 4px 0; 
+  }
+.letter .pt_10 {
+    padding-top: 10px; 
+  }
+.letter .ftname {
+    display: block;
+    font-weight: bold;
+    font-size: 14px; 
+  }
+.letter p {
+    font-size: 10px;
+    line-height: 160%;
+    margin: 0 0 20px 0;
+    white-space: nowrap; 
+  }
 
 
 

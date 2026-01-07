@@ -173,30 +173,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- 自動遷移Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    let isSubmitting = false; // 送信中フラグ
-
-    // 全フォームを取得
-    const forms = document.querySelectorAll('form[target="hidden_iframe"]');
-    const iframe = document.getElementsByName('hidden_iframe')[0];
-
-    // フォーム送信時にフラグを立てる
+    const forms = document.querySelectorAll('form[action="https://x-sennin.com/api/register/tagandmail.php"]');
+    
     forms.forEach(function(form) {
-        form.addEventListener('submit', function() {
-            isSubmitting = true;
-            // 二重送信防止のため、少し待ってからボタンを無効化しても良い
-        });
-    });
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
 
-    // iframeが読み込まれたら（＝PHP処理完了してレスポンスが返ったら）遷移
-    iframe.addEventListener('load', function() {
-        if (isSubmitting) {
-            window.location.href = 'https://www.senninx.com/xpower/mrkozaki_justin/';
-        }
+            // ▼▼▼ 追加 ▼▼▼
+            formData.append('_page_url', window.location.href);            
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = 'https://www.xsennin.com/xpower/mrkozaki_justin';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
     });
 });
 </script>
 
-<!-- (jQueryとMailcheckのスクリプトはそのまま維持) -->
 
 
 

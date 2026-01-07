@@ -178,6 +178,18 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+
+           // ▼▼▼ ボタン制御の追加 ▼▼▼
+            // 送信ボタンを取得
+            const submitBtn = form.querySelector('input[type="submit"]');
+            const originalVal = submitBtn ? submitBtn.value : '';
+
+            // ボタンを無効化し、テキストを変更
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.value = '送信中...';
+                submitBtn.style.cursor = 'wait'; // マウスカーソルも待機状態に
+            }
             
             const formData = new FormData(form);
 
@@ -190,11 +202,22 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = 'https://www.xsennin.com/xpower/mrkozaki_justin';
+                    // 成功時：遷移
+                    window.location.href = 'https://www.senninx.com/xpower/mrkozaki_justin';
+                } else {
+                    // サーバーエラー時：ボタンを復帰させる
+                    throw new Error('Server returned ' + response.status);
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
+                // エラー時：ボタンを再度押せるように
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.value = originalVal;
+                    submitBtn.style.cursor = 'pointer';
+                    alert('送信エラーが発生しました。もう一度お試しください。');
+                }
             });
         });
     });

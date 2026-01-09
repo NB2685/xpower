@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body {
+  background: url(bg_center.jpg) top center repeat-y; }
+
+#wrapper {
+  width: 740px;
+  margin: 0 auto; }
+
+p {
+  text-align: center; }
+
+table {
+  margin-left: 65px;
+  display: block; }
+  table th {
+    font-size: 24px;
+    padding-bottom: 10px;
+    vertical-align: top; }
+
+input {
+  height: 24px;
+  width: 370px; }
+
+.button input {
+  width: 100px;
+  margin-top: 30px; }
+
+textarea {
+  width: 370px;
+  height: 150px; }
+
+.topletter {
+  padding: 50px 0 20px 0; }
+  .topletter h1 {
+    font-family: "ヒラギノ角ゴ StdN W8", "Hiragino Kaku Gothic StdN", "HGP創英角ｺﾞｼｯｸUB", "HGPSoeiKakugothicUB", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0 auto 50px;
+    text-align: center; }
+  .topletter h2 {
+    font-family: "Hiragino Maru Gothic Pro", "HG丸ゴシックM-PRO", verdana, arial, sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0 auto 50px; }
+  .topletter p {
+    font-family: "Hiragino Maru Gothic Pro", "HG丸ゴシックM-PRO", verdana, arial, sans-serif;
+    font-size: 24px;
+    line-height: 160%;
+    margin: 0 auto 30px;
+    text-align: left; }
+  .topletter .ft_red {
+    color: #f6171e; }
+  .topletter .mb_60 {
+    margin-bottom: 60px; }
+
+/*# sourceMappingURL=style.css.map */
